@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EcoFuturo</title>
+    <link href="https://fonts.googleapis.com/css?family=Yantramanav:100,300,400,500,700&amp;subset=devanagari,latin-ext" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track'=> true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+  	<header>
+		<nav class="be-green white large-padding">
+			<ul class="no-margin no-list row center-xs middle-xs">
+				<li class="col-md">
+					<h1 class="no-margin" id="tam_logo"><%= link_to "EcoFuturo", root_path %></h1>
+				</li>
+				<li class="col-md">
+					<%= link_to "Inicio", root_path %>
+				</li>
+				<li class="col-md">
+					Tecnologia
+				</li>
+				<li class="col-md">
+					Hogar
+				</li>
+				<li class="col-md">
+					Herramientas
+				</li>
+				<li class="col-md">
+					Comida
+				</li>
+				<% if eco_user_signed_in? %> 
+					<li class="col-md">
+						<%= link_to "Cerrar sesión", destroy_eco_user_session_path, method: :delete %>
+					</li>
+				<% else %>
+					<li class="col-md">
+						<%= link_to "Inicio Ecousuario", new_eco_user_session_path%>
+					</li>
+					<li class="col-md">
+						<%= link_to "Registro", new_eco_user_registration_path%>
+					</li>
+				<%end%>
+			</ul>
+		</nav>
+	</header>
+	<p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  	
+    <%= yield %>
+  </body>
+</html>

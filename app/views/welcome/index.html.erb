@@ -1,0 +1,13 @@
+<% if eco_user_signed_in? %> 
+	<h2>Valar Morghulis <%= current_eco_user.email %></h2>
+<%else%>
+	<h2>Pagina principal</h2>
+<%end%>
+<p>By Christian Sanabria Rodriguez</p>
+
+
+<%= [1,2,3,4].each do |number| %>
+	<p>Número: <%= number %> </p>
+<%end%>
+<% mundo = "Uriel"%>
+<%= "hola #{mundo}" %>

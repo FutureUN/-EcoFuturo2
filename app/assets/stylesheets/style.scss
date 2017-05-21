@@ -1,0 +1,50 @@
+
+html, body{
+	margin: 0;
+	font-family: 'Yantramanav', sans-serif;
+}
+.btn{
+	background-color: inherit;
+	border: none;
+	outline: none;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-size: 1.2em;
+	padding: 7px 7px;
+	border-radius: 20px;
+}
+.btnEliminar{
+	background-color: inherit;
+	color: #4EBF4B !important;
+}
+a,a:visited{
+	color: inherit;
+	text-decoration: none;
+}
+.be-green{
+	background-color: #4EBF4B;
+}
+.white{
+	color: #EBF2E9 !important;
+}
+.large-padding{
+	padding: 7px 5px;
+}
+.no-margin{
+	margin: 0;
+}
+#tam_logo{
+	font-size: 2em;
+}
+.field,.top-space,.actions{
+	margin-top: 1em;
+}
+.form-control{
+	border:none;
+	border-bottom: 1px solid;
+	outline: none;
+	width: 100%;
+	display: block;
+	padding: 10px 0px;
+	font-size: 1.2em; 
+}
