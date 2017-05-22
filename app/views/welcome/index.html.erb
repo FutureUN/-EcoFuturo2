@@ -1,5 +1,30 @@
-<% if eco_user_signed_in? %> 
+<% if eco_user_signed_in? %>
 	<h2>Valar Morghulis <%= current_eco_user.email %></h2>
 <%else%>
 	<h2>Pagina principal</h2>
 <%end%>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<header class="w3-container w3-xlarge w3-rest" style="width:100%">
+    <p class="w3-left">¿Y tu qué puedes hacer? <i class="fa fa-envira"></i></p>
+    <p class="w3-right">
+      <i class="fa fa-shopping-cart w3-margin-right"></i>
+      <i class="fa fa-search"></i>
+    </p>
+  </header>
+
+  <!-- Image header -->
+  <div class="w3-display-container w3-container">
+    <img src="http://k36.kn3.net/taringa/2/1/4/9/7/2/36/zbosterowtc/498.jpg?2003" alt="Planeta" style="width:103%">
+    <div class="w3-display-topleft w3-text-silver " style="padding:24px 48px">
+      <h1 class="w3-jumbo w3-hide-small">El mundo te necesita</h1>
+      <h1 class="w3-jumbo w3-hide-small"><i>Ahora</i></h1>
+      <h1 class="w3-hide-large w3-hide-medium">New arrivals</h1>
+      <h1 class="w3-hide-small w3-display-center">HAS TU APORTE</h1>
+			<%= link_to "Ingresar", new_eco_user_session_path, class:"w3-button w3-black w3-padding-large w3-large"%>
+    </div>
+  </div>
