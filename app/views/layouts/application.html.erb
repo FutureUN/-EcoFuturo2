@@ -2,10 +2,11 @@
 <html>
   <head>
     <title>EcoFuturo</title>
-    <link href="https://fonts.googleapis.com/css?family=Yantramanav:100,300,400,500,700&amp;subset=devanagari,latin-ext" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700,700i" rel="stylesheet"> 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track'=> true %>
     <%= csrf_meta_tags %>
+    
   </head>
 
   <body>
@@ -15,31 +16,31 @@
 				<li class="col-md">
 					<h1 class="no-margin" id="tam_logo"><%= link_to "EcoFuturo", root_path %></h1>
 				</li>
-				<li class="col-md">
-					<%= link_to "Inicio", root_path %>
+				<li class="col-md ">
+					<%= link_to "Inicio", root_path, class:"menuar" %>
 				</li>
 				<li class="col-md">
-					Tecnologia
+					<%= link_to "Articulos", articles_path, class:"menuar" %>
 				</li>
 				<li class="col-md">
-					Hogar
+					<%= link_to "Hogar", root_path, class:"menuar" %>
 				</li>
 				<li class="col-md">
-					Herramientas
+					<%= link_to "Herramientas", root_path, class:"menuar" %>
 				</li>
 				<li class="col-md">
-					Comida
+					<%= link_to "Comida", root_path , class:"menuar"%>
 				</li>
 				<% if eco_user_signed_in? %> 
 					<li class="col-md">
-						<%= link_to "Cerrar sesión", destroy_eco_user_session_path, method: :delete %>
+						<%= link_to "Cerrar sesión", destroy_eco_user_session_path, method: :delete, class:"menuar" %>
 					</li>
 				<% else %>
 					<li class="col-md">
-						<%= link_to "Inicio Ecousuario", new_eco_user_session_path%>
+						<%= link_to "Inicio Ecousuario", new_eco_user_session_path, class:"menuar"%>
 					</li>
 					<li class="col-md">
-						<%= link_to "Registro", new_eco_user_registration_path%>
+						<%= link_to "Registro", new_eco_user_registration_path, class:"menuar"%>
 					</li>
 				<%end%>
 			</ul>
