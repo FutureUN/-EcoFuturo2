@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :eco_users
   resources :articles 
+  get 'ecousuarios', to: "welcome#ecousuarios"
 =begin
 	ejemplos: 
 	resources :articles, except: [:delete]

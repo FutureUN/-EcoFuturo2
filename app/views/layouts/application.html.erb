@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+  	<meta charset="UTF-8">
     <title>EcoFuturo</title>
      <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700,700i" rel="stylesheet">
      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> true %>
@@ -15,18 +14,17 @@
   </head>
 
   <body>
-  	<header>
-		<nav class="be-green white large-padding">
+  	<header class="no-margin" style="margin:0">
+		<nav class="be-green white large-padding no-margin" >
 			<ul class="no-margin no-list row center-xs middle-xs">
 				<li class="col-md">
 					<h1 class="no-margin" id="tam_logo"><%= link_to "EcoFuturo", root_path %></h1>
 				</li>
-				<li class="w3-bar-item">
+				<li class="col-md">
 					<%= link_to "Inicio", root_path, class:"menuar" %>
 				</li>
 				<li class="col-md">
-          <%= link_to "Nuevo Articulo", new_article_path,
-          class:"menuar" %>
+          		<%= link_to "Articulos", articles_path, class:"menuar" %>
 				</li>
 				<li class="col-md">
 					<%= link_to "Hogar", root_path, class:"menuar" %>
@@ -39,22 +37,21 @@
 				</li>
 				<% if eco_user_signed_in? %>
 					<li class="col-md">
-						<%= link_to "Cerrar sesión", destroy_eco_user_session_path,
-            method: :delete, class:"menuar" %>
+						<%= link_to "Cerrar sesión", destroy_eco_user_session_path, method: :delete, class:"menuar" %>
 					</li>
 				<% else %>
 					<li class="col-md">
-						<%= link_to "Inicio Ecousuario", new_eco_user_session_path, class:"menuar"%>
-					</li>
-					<li class="col-md">
-						<%= link_to "Registro", new_eco_user_registration_path, class:"menuar"%>
+						<%= link_to "Ecousuarios", ecousuarios_path , class:"menuar"%>
 					</li>
 				<%end%>
+				<li class="col-md">
+						<i class="fa fa-search"></i>
+				</li>
 			</ul>
 		</nav>
 	</header>
-	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+	<p class="notice no-margin"><%= notice %></p>
+    <p class="alert no-margin"><%= alert %></p>
 
     <%= yield %>
   </body>

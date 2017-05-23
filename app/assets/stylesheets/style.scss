@@ -13,6 +13,10 @@ html, body{
 	padding: 7px 7px;
 	border-radius: 20px;
 }
+img{
+	margin: 0;
+	padding: 0;
+}
 .btnEliminar{
 	background-color: inherit;
 	color: #30BF31 !important;
@@ -22,7 +26,7 @@ a,a:visited{
 	text-decoration: none;
 }
 .menuar{
-	padding: 1em 7px;
+	padding: 1.4em 7px;
 }
 .menuar:hover{
 	background-color: #CBC9CF;
@@ -57,4 +61,36 @@ a,a:visited{
 	font-size: 1.2em;
 	border-radius: 4px;
     background-color: #f8f8f8;
+}
+.entry{
+	display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.icia, .regis{
+	margin: 100px;
+    padding: 10px;
+    vertical-align: middle;
+	text-align:center;
+	position:relative; 
+	display: inline-block;
+}
+.icia a, .regis a{
+	border: 2px solid #81D600;
+	color: #81D600;
+    border-radius: 4px;
+	width: 100%;
+    height: 400px;
+    vertical-align: middle;
+	text-align:center;
+	position:relative; 
+	display: inline-block;
+}
+.icia a:hover, .regis a:hover{
+	border: 2px solid #81D600;
+	color: #fff;
+	background-color: #81D600;
+    border-radius: 4px;
 }
